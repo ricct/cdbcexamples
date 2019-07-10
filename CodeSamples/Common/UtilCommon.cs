@@ -30,20 +30,6 @@ namespace CodeSamples.Common
         public static CdbcConnection getConnection(DatabaseProductType databaseProductType)
         {
     
-            switch (databaseProductType)
-            {
-                case DatabaseProductType.Oracle:
-                    // connectionStrings name been set  in CdbcService's web.config 
-                    //connectionString = "dbsv3_oralce_demo";  
-                    break;
-                case DatabaseProductType.SqlServer:
-
-                    break;
-                default:
-
-                    break;
-            }
-
             CdbcConnection con = new CdbcConnection(connectionString);
 
             //In case of in CDBCservice's web.config.
@@ -59,18 +45,18 @@ namespace CodeSamples.Common
             //In case of in CDBCservice's web.config.
             //  <userAuthentication authMethod="None">
             //You need not set UserId , UserPsk or UserPassword
-            // <userAuthentication authMethod="None"> is not recommended in production.
+            // <userAuthentication authMethod="None"> is not recommended for production use.
 
 
             //In case of in CDBCservice's web.config.
             //  <clientApplicationAuthentication authMethod="ApplicationPsk">
             con.ApplicationId = UtilCommon.ApplicationId;
             con.ApplicationPsk = UtilCommon.ApplicationPsk;
-            
+
             //In case of in CDBCservice's web.config.
             //  <clientApplicationAuthentication authMethod="None">
             //You need not set ApplicationId or ApplicationPsk
-            //  <clientApplicationAuthentication authMethod="None"> is not recommended in production.
+            //  <clientApplicationAuthentication authMethod="None"> is not recommended for production use.
 
             con.DatabaseProduct = databaseProductType;
             return con;
