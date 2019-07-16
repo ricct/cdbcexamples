@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CodeSamples</RootNamespace>
     <AssemblyName>CodeSamples</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +42,9 @@
     <Reference Include="Cdbc.Data, Version=4.0.1907.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Cdbc.Data.4.0.1907\lib\net45\Cdbc.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -61,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ControlWriter.cs" />
+    <Compile Include="Common\Student.cs" />
     <Compile Include="Common\UtilCommon.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -74,6 +79,7 @@
     <Compile Include="FrmSamples.Designer.cs">
       <DependentUpon>FrmSamples.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oracle\OracleDapperSample.cs" />
     <Compile Include="Oracle\OracleCommandCollectionSample.cs" />
     <Compile Include="Oracle\OracleCommandSample.cs" />
     <Compile Include="Oracle\OracleDataAdapterSample.cs" />
@@ -93,6 +99,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
