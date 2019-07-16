@@ -35,7 +35,12 @@
             this.btnDataAdapterFill = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.RichTextBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnDapperExecuteMany = new System.Windows.Forms.Button();
+            this.btnDapperExecute = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblLink = new System.Windows.Forms.Label();
             this.txtConnectionString = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUserPsk = new System.Windows.Forms.TextBox();
@@ -54,10 +59,9 @@
             this.btnCommandExecuteNonQuery = new System.Windows.Forms.Button();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.lblLink = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.pnlLeft.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,7 +86,7 @@
             this.btnDataAdapterMultiFill.BackColor = System.Drawing.Color.MistyRose;
             this.btnDataAdapterMultiFill.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnDataAdapterMultiFill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDataAdapterMultiFill.Location = new System.Drawing.Point(17, 232);
+            this.btnDataAdapterMultiFill.Location = new System.Drawing.Point(17, 231);
             this.btnDataAdapterMultiFill.Name = "btnDataAdapterMultiFill";
             this.btnDataAdapterMultiFill.Size = new System.Drawing.Size(200, 36);
             this.btnDataAdapterMultiFill.TabIndex = 3;
@@ -94,7 +98,7 @@
             // 
             this.btnDataAdapterUpdate.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnDataAdapterUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDataAdapterUpdate.Location = new System.Drawing.Point(17, 141);
+            this.btnDataAdapterUpdate.Location = new System.Drawing.Point(17, 163);
             this.btnDataAdapterUpdate.Name = "btnDataAdapterUpdate";
             this.btnDataAdapterUpdate.Size = new System.Drawing.Size(200, 36);
             this.btnDataAdapterUpdate.TabIndex = 2;
@@ -106,7 +110,7 @@
             // 
             this.btnDataAdapterFillSchema.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnDataAdapterFillSchema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDataAdapterFillSchema.Location = new System.Drawing.Point(17, 84);
+            this.btnDataAdapterFillSchema.Location = new System.Drawing.Point(17, 95);
             this.btnDataAdapterFillSchema.Name = "btnDataAdapterFillSchema";
             this.btnDataAdapterFillSchema.Size = new System.Drawing.Size(200, 36);
             this.btnDataAdapterFillSchema.TabIndex = 1;
@@ -132,12 +136,13 @@
             this.txtOutput.Location = new System.Drawing.Point(0, 0);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(461, 561);
+            this.txtOutput.Size = new System.Drawing.Size(461, 641);
             this.txtOutput.TabIndex = 2;
             this.txtOutput.Text = "";
             // 
             // pnlLeft
             // 
+            this.pnlLeft.Controls.Add(this.groupBox5);
             this.pnlLeft.Controls.Add(this.groupBox4);
             this.pnlLeft.Controls.Add(this.groupBox3);
             this.pnlLeft.Controls.Add(this.groupBox2);
@@ -145,8 +150,43 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(547, 561);
+            this.pnlLeft.Size = new System.Drawing.Size(547, 641);
             this.pnlLeft.TabIndex = 3;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnDapperExecuteMany);
+            this.groupBox5.Controls.Add(this.btnDapperExecute);
+            this.groupBox5.Location = new System.Drawing.Point(17, 528);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(516, 87);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Dapper";
+            // 
+            // btnDapperExecuteMany
+            // 
+            this.btnDapperExecuteMany.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnDapperExecuteMany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDapperExecuteMany.Location = new System.Drawing.Point(276, 28);
+            this.btnDapperExecuteMany.Name = "btnDapperExecuteMany";
+            this.btnDapperExecuteMany.Size = new System.Drawing.Size(229, 36);
+            this.btnDapperExecuteMany.TabIndex = 2;
+            this.btnDapperExecuteMany.Text = "Dapper.ExecuteMany";
+            this.btnDapperExecuteMany.UseVisualStyleBackColor = true;
+            this.btnDapperExecuteMany.Click += new System.EventHandler(this.RunSample);
+            // 
+            // btnDapperExecute
+            // 
+            this.btnDapperExecute.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnDapperExecute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDapperExecute.Location = new System.Drawing.Point(15, 28);
+            this.btnDapperExecute.Name = "btnDapperExecute";
+            this.btnDapperExecute.Size = new System.Drawing.Size(200, 36);
+            this.btnDapperExecute.TabIndex = 1;
+            this.btnDapperExecute.Text = "Dapper.Execute";
+            this.btnDapperExecute.UseVisualStyleBackColor = true;
+            this.btnDapperExecute.Click += new System.EventHandler(this.RunSample);
             // 
             // groupBox4
             // 
@@ -169,12 +209,36 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Authentication";
             // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(19, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(256, 18);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Please get authentication information from :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
+            // 
+            // lblLink
+            // 
+            this.lblLink.AutoSize = true;
+            this.lblLink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLink.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblLink.Location = new System.Drawing.Point(103, 40);
+            this.lblLink.Name = "lblLink";
+            this.lblLink.Size = new System.Drawing.Size(310, 16);
+            this.lblLink.TabIndex = 13;
+            this.lblLink.Text = "https://github.com/ricct/cdbcexamples";
+            this.lblLink.Click += new System.EventHandler(this.LblLink_Click);
+            // 
             // txtConnectionString
             // 
             this.txtConnectionString.Location = new System.Drawing.Point(106, 144);
             this.txtConnectionString.Name = "txtConnectionString";
             this.txtConnectionString.Size = new System.Drawing.Size(135, 19);
             this.txtConnectionString.TabIndex = 11;
+            this.txtConnectionString.Text = "oracle_democode";
             // 
             // label5
             // 
@@ -207,6 +271,7 @@
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(135, 19);
             this.txtUserID.TabIndex = 7;
+            this.txtUserID.Text = "democodeuser1";
             // 
             // label4
             // 
@@ -239,6 +304,7 @@
             this.txtApplicationID.Name = "txtApplicationID";
             this.txtApplicationID.Size = new System.Drawing.Size(135, 19);
             this.txtApplicationID.TabIndex = 3;
+            this.txtApplicationID.Text = "democodeappli";
             // 
             // label1
             // 
@@ -264,9 +330,9 @@
             this.btnCommandCollectionExecuteMultiQuery.BackColor = System.Drawing.Color.MistyRose;
             this.btnCommandCollectionExecuteMultiQuery.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnCommandCollectionExecuteMultiQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCommandCollectionExecuteMultiQuery.Location = new System.Drawing.Point(16, 24);
+            this.btnCommandCollectionExecuteMultiQuery.Location = new System.Drawing.Point(6, 24);
             this.btnCommandCollectionExecuteMultiQuery.Name = "btnCommandCollectionExecuteMultiQuery";
-            this.btnCommandCollectionExecuteMultiQuery.Size = new System.Drawing.Size(223, 50);
+            this.btnCommandCollectionExecuteMultiQuery.Size = new System.Drawing.Size(229, 50);
             this.btnCommandCollectionExecuteMultiQuery.TabIndex = 3;
             this.btnCommandCollectionExecuteMultiQuery.Text = "CommandCollection.\r\nExecuteMultiQuery";
             this.btnCommandCollectionExecuteMultiQuery.UseVisualStyleBackColor = false;
@@ -288,9 +354,9 @@
             // 
             this.btnCommandExecuteDbDataReader.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnCommandExecuteDbDataReader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCommandExecuteDbDataReader.Location = new System.Drawing.Point(16, 134);
+            this.btnCommandExecuteDbDataReader.Location = new System.Drawing.Point(6, 134);
             this.btnCommandExecuteDbDataReader.Name = "btnCommandExecuteDbDataReader";
-            this.btnCommandExecuteDbDataReader.Size = new System.Drawing.Size(223, 51);
+            this.btnCommandExecuteDbDataReader.Size = new System.Drawing.Size(229, 51);
             this.btnCommandExecuteDbDataReader.TabIndex = 2;
             this.btnCommandExecuteDbDataReader.Text = "Command.\r\nExecuteDbDataReader";
             this.btnCommandExecuteDbDataReader.UseVisualStyleBackColor = true;
@@ -300,7 +366,7 @@
             // 
             this.btnCommandExecuteScalar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnCommandExecuteScalar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCommandExecuteScalar.Location = new System.Drawing.Point(10, 84);
+            this.btnCommandExecuteScalar.Location = new System.Drawing.Point(6, 84);
             this.btnCommandExecuteScalar.Name = "btnCommandExecuteScalar";
             this.btnCommandExecuteScalar.Size = new System.Drawing.Size(229, 36);
             this.btnCommandExecuteScalar.TabIndex = 1;
@@ -314,7 +380,7 @@
             this.btnCommandExecuteNonQuery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCommandExecuteNonQuery.Location = new System.Drawing.Point(6, 27);
             this.btnCommandExecuteNonQuery.Name = "btnCommandExecuteNonQuery";
-            this.btnCommandExecuteNonQuery.Size = new System.Drawing.Size(234, 36);
+            this.btnCommandExecuteNonQuery.Size = new System.Drawing.Size(229, 36);
             this.btnCommandExecuteNonQuery.TabIndex = 0;
             this.btnCommandExecuteNonQuery.Text = "Command.ExecuteNonQuery";
             this.btnCommandExecuteNonQuery.UseVisualStyleBackColor = true;
@@ -326,36 +392,14 @@
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRight.Location = new System.Drawing.Point(547, 0);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(461, 561);
+            this.pnlRight.Size = new System.Drawing.Size(461, 641);
             this.pnlRight.TabIndex = 4;
-            // 
-            // lblLink
-            // 
-            this.lblLink.AutoSize = true;
-            this.lblLink.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLink.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblLink.Location = new System.Drawing.Point(103, 40);
-            this.lblLink.Name = "lblLink";
-            this.lblLink.Size = new System.Drawing.Size(310, 16);
-            this.lblLink.TabIndex = 13;
-            this.lblLink.Text = "https://github.com/ricct/cdbcexamples";
-            this.lblLink.Click += new System.EventHandler(this.LblLink_Click);
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(19, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(256, 18);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Please get authentication information from :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FrmSamples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.ClientSize = new System.Drawing.Size(1008, 641);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
             this.Name = "FrmSamples";
@@ -363,6 +407,7 @@
             this.Text = "Samples";
             this.groupBox1.ResumeLayout(false);
             this.pnlLeft.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -402,5 +447,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblLink;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnDapperExecuteMany;
+        private System.Windows.Forms.Button btnDapperExecute;
     }
 }

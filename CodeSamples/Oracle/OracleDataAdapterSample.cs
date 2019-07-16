@@ -44,8 +44,6 @@ namespace CodeSamples.Oracle
 
             try
             {
-
-
                 CdbcDataAdapter adap = new CdbcDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adap.Fill(ds);

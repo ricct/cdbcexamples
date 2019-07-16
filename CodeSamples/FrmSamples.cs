@@ -90,6 +90,16 @@ namespace CodeSamples
                     {
                         OracleCommandCollectionSample.CommandCollection_ExecuteMultiQuery_Sample();
                     }
+                    //Dapper
+                    else if (btn.Equals(btnDapperExecute.Name))
+                    {
+                        OracleDapperSample.Dapper_Execute_Sample();
+                    }
+                    else if (btn.Equals(btnDapperExecuteMany.Name))
+                    {
+                        OracleDapperSample.Dapper_ExecuteMany_Sample();
+                    }
+
                     break;
                 case DatabaseProductType.SqlServer:
 
@@ -104,6 +114,11 @@ namespace CodeSamples
         private void LblLink_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/ricct/cdbcexamples");
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
