@@ -36,11 +36,11 @@
     <ApplicationIcon>cdbc.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cdbc.Common, Version=4.0.1907.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cdbc.Data.4.0.1907\lib\net45\Cdbc.Common.dll</HintPath>
+    <Reference Include="Cdbc.Common, Version=4.1.1907.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cdbc.Data.4.1.1907.1\lib\net45\Cdbc.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Cdbc.Data, Version=4.0.1907.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cdbc.Data.4.0.1907\lib\net45\Cdbc.Data.dll</HintPath>
+    <Reference Include="Cdbc.Data, Version=4.1.1907.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Cdbc.Data.4.1.1907.1\lib\net45\Cdbc.Data.dll</HintPath>
     </Reference>
     <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
