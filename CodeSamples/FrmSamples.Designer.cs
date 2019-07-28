@@ -402,6 +402,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 641);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
+            this.MinimumSize = new System.Drawing.Size(1000, 680);
             this.Name = "FrmSamples";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Samples";
